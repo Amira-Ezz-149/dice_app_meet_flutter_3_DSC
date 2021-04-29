@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(
-        title: 'GIG | Dice ',
+        title: 'GFG | Dice ',
       ),
     );
   }
