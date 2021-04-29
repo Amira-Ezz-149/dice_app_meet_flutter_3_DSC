@@ -11,7 +11,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int _counter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +23,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SizedBox(
         child: FlatButton(
+          onPressed: () {
+            setState(() {
+              _counter = Random().nextInt(6) + 1;
+            });
+          },
           color: Colors.indigoAccent,
           child: Image(
             image: AssetImage(
@@ -32,11 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
             width: double.infinity,
             height: double.infinity,
           ),
-          onPressed: () {
-            setState(() {
-              _counter = Random().nextInt(6) + 1;
-            });
-          },
         ),
       ),
     );
